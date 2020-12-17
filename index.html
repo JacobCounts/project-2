@@ -1,165 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="countdown.css" />
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        #snow-fall {
-            width: 100%;
-            height: 100vh;
-            background: #262626 url(images/snow2.jpeg);
-            background-image: cover;
-        }
-        .banner {
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            
-        }
-        .banner h1 {
-            font-size: 80px ;
-            color: rgb(223, 11, 11);
-            font-weight: 300;
-            font-family: 'Mountains of Christmas', cursive;
-            text-shadow: 2px 2px black;
-            margin-bottom: 30px;
-            /* animation-name: moveLeft loco;
-            animation-duration: 2s; */
-            animation-name: loco;
-            animation-duration: 7s;
-            animation-timing-function: ease;
-            animation-iteration-count: infinite;
-            animation-delay: 2s;
-        }
-        @keyframes loco {
-   
-             0% {color: rgb(255, 0, 0);}
-            10% {color: rgb(250, 84, 7);}
-            20% {color: rgb(250, 205, 4);}
-            30% {color: rgb(201, 252, 82);}
-            40% {color: rgb(84, 250, 43);}
-            50% {color: rgb(84, 250, 43);}
-            60% {color: rgb(201, 252, 82);}
-            70% {color: rgb(250, 205, 4);}
-            80% {color: rgb(250, 84, 7);}
-            90% {color: rgba(250, 44, 44,);}
-            100% {color: rgba(255, 0, 0,);}
-        }    
-
-        .banner span {
-            text-transform: uppercase;
-            font-weight: 700;
-            color: rgb(223, 11, 11);
-            animation-name: loco;
-            animation-duration: 7s;
-            animation-timing-function: ease;
-            animation-iteration-count: infinite;
-            animation-delay: 2s;
-
-        }
-        .banner p {
-            font-size: 35px;
-            font-weight: 300;
-            text-shadow: 2px 2px rgb(5, 5, 5);
-            color: ghostwhite;
-            margin-bottom: 20px;
-            animation-name: moveRight;
-            animation-duration: 2s;
-        }
-        .banner button {
-            width: 180px;
-            padding: 12px;
-            margin: 20px;
-            border: 2px solid rgba(190, 38, 38, 0.384);
-            border-radius: 50px;
-            font-size: 18px;
-            text-shadow: 2px 2px rgb(5, 5, 5);
-            font-family: 'Mountains of Christmas', cursive;
-            outline: none;
-            letter-spacing: 1px;
-            cursor: pointer;
-        }
-        .btn-left {
-            background-color: rgba(226, 28, 28, 0.623);
-            color: rgb(250, 250, 250);
-            text-shadow: 2px 2px rgb(5, 5, 5);
-            animation-name: animateBtn;
-            animation-duration: 1s;
-            animation-delay: 1.5s;
-            animation-fill-mode: backwards;
-        }
-        .btn-right {
-            background-color:rgba(226, 28, 28, 0.623) ;
-            color: rgb(250, 250, 250);
-            animation-name: animateBtn;
-            animation-duration: 1s;
-            animation-delay: 2.5s;
-            animation-fill-mode: backwards;
-        }
-        
-
-        @keyframes moveLeft {
-            0% {
-                transform: translateX(120px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        @keyframes moveRight {
-            0% {
-                transform: translateX(-120px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        @keyframes animateBtn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-    </style>
-</head>
-<body>
-<div>
-</div>
-
-<div id = "snow-fall">
-    <div class="container">
-        <div class = "banner">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div>
+      <div id="snow-fall">
+        <div class="container">
+          <div class="banner">
             <h1>Jingle <span>All The Way</span></h1>
             <p>Share all your christmas wishes</p>
             <button type="button" class="btn-left">WISH LIST</button>
             <button type="button" class="btn-right">SHOPPING LIST</button>
+            <div class="container">
+              <div class="countdown">
+                <div id="day"></div>
+                <div id="hour"></div>
+                <div id="minute"></div>
+                <div id="second"></div>
+              </div>
+            </div>
+          </div>
+
+          <script type="text/javascript">
+            let countDate = new Date("Dec 25, 2020 00:00:00").getTime();
+            function christmasCountdown() {
+              let now = new Date().getTime();
+              date = countDate - now;
+
+              let second = 1000;
+              let minute = second * 60;
+              let hour = minute * 60;
+              let day = hour * 24;
+
+              let d = Math.floor(date / day);
+              let h = Math.floor((date % day) / hour);
+              let m = Math.floor((date % hour) / minute);
+              let s = Math.floor((date % minute) / second);
+
+              document.getElementById("day").innerText = d;
+              document.getElementById("hour").innerText = h;
+              document.getElementById("minute").innerText = m;
+              document.getElementById("second").innerText = s;
+            }
+
+            setInterval(function () {
+              christmasCountdown();
+            }, 1000);
+          </script>
         </div>
+      </div>
     </div>
-</div>
     <!--<script type= "text/javascript" src= "snowparticles.js">
     </script>
     <script type = "text/javascript" src= "snow.js">
     </script>-->
-</body>
+  </body>
 </html>
